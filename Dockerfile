@@ -367,5 +367,6 @@ RUN adduser -S nginx-api-gateway \
     && addgroup -S nginx-api-gateway
 ONBUILD COPY api-gateway-config /etc/api-gateway
 
+COPY KafkaLogger.lua /usr/local/api-gateway/lualib/api-gateway/logger/backend/KafkaLogger.lua
 
 ENTRYPOINT ["/etc/init-container.sh"]

@@ -73,7 +73,7 @@ local function initTrackingFactory(parentObject)
 end
 
 local function initMetricsFactory(parentObject)
-    parentObject.metrics = require "metrics.factory"
+    parentObject.metrics = require "metrics.KafkaStreamFactory"
 end
 
 initValidationFactory(_M)
